@@ -6,12 +6,12 @@ import NavBarbootstrap from './components/NavBarbootstrap';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 function App() {
 const [modeval,setmode]=useState("light");
@@ -43,21 +43,22 @@ setAlert(
   <>
 {/* <Navbar tittle="TestUtils"/> */}
 {/* <TextForm heading="Enter your text "/> */}
-<Router>
+{/* <Router> */}
 <NavBarbootstrap mode={modeval} togele={taoglefunction}/>
 <Alert alert={alert}></Alert>
 <div className='container my-2'>
-<Switch>
+<TextForm heading="Enter your text " mode={modeval} showAlert={showAlert} /> 
+{/* <Switch>
           <Route exact path="/abaut">
             <AboutUs/>
           </Route>
           <Route exact path="/">
           <TextForm heading="Enter your text " mode={modeval} showAlert={showAlert} /> 
           </Route>
-        </Switch>
+        </Switch> */}
 
 </div>
-</Router>    
+{/* </Router>     */}
 </>
   );
 }
