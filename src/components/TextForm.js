@@ -48,7 +48,7 @@ export default function TextForm(props) {
    </div>
     </div>
     <div className='container' style={{backgroundColor:props.mode==="light"?"white":"#343a40",color:props.mode==="light"?"black":"white"}}>
-     <p>Total word {text.length===0?0:text.trim().split(" ").length} and Total character {text.length}</p>
+     <p>Total word {text.split(" "). filter((element)=>{return element.length!==0}).length} and Total character {text.length}</p>
      <h2>Preview</h2>
      <p>{text.length>0?text:"Enter above text box to preview here"}</p>
     </div>
